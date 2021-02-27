@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Finance Test</string>
+    <string name="title_all">All finance</string>
+    <string name="title_favorites">Favorites finance</string>
+</resources>
