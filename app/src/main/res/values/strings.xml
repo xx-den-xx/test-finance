@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Finance Test</string>
-    <string name="title_all">All finance</string>
-    <string name="title_favorites">Favorites finance</string>
+    <string name="app_name">Finance</string>
+    <string name="title_all">All pairs</string>
+    <string name="title_favorites">Favorites pairs</string>
+    <string name="title_pairs">Pairs</string>
+    <string name="chart">Chart</string>
+    <string name="enter_search_request">Enter search request</string>
 </resources>

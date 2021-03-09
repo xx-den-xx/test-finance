@@ -3,17 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_all">
+    app:startDestination="@+id/navigation_currency_pairs">
 
     <fragment
-        android:id="@+id/navigation_all"
-        android:name="com.bda.financetest.ui.all.AllFragment"
+        android:id="@+id/navigation_currency_pairs"
+        android:name="com.bda.finance_test.ui.currencyPairs.CurrencyPairsFragment"
         android:label="@string/title_all"
-        tools:layout="@layout/fragment_all" />
+        tools:layout="@layout/fragment_currency_pairs">
+
+        <argument
+            android:name="pair"
+            app:argType="com.bda.finance_test.model.database.entity.CurrencyPair" />
+
+        <action
+            android:id="@+id/action_navigation_currency_pairs_to_navigation_chart"
+            app:destination="@id/navigation_chart"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="false"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_favorites"
-        android:name="com.bda.financetest.ui.favorites.FavoritesFragment"
-        android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        android:id="@+id/navigation_chart"
+        android:name="com.bda.finance_test.ui.chart.ChartFragment"
+        android:label="@string/chart"
+        tools:layout="@layout/fragment_chart">
+    </fragment>
+
 </navigation>
